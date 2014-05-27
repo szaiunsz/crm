@@ -1,0 +1,66 @@
+<div class="panel" title="客户详情" data-nav="nav_0" js-scrolling="false" id="page_account_detail" data-tab="account"
+     data-appbuilder-object="page" data-header="header_account_detail" style="overflow: hidden; display: none;" data-footer="none">
+    <header id="header_account_detail" data-appbuilder-object="header">
+        <a class="icon icon-reply header-icon left-icon" actionname="goBack"></a>
+        <h1>客户详情</h1>
+        <a class="icon header-icon right-icon icon-edit" actionname="toEdit"></a>
+    </header>
+    <div class="searchDiv">
+        <input type="search" class="searchInput" style="" placeholder="请输入名字">
+        <a class="searchButton" actionname="searchButton" objectname="teamadd">搜索</a>
+    </div>
+    <div id="wrapperAD" class="wrapper">
+        <div id="scrollerAD" class="scroller">
+            <div id="thedetail">
+                <ul></ul>
+            </div>
+        </div>
+    </div>
+    <div id="wrapperAL" class="wrapper">
+        <div id="scrollerAL" class="scroller">
+            <ul id="theoperation"></ul>
+            <ul id="theobjectlist">
+            </ul>
+            <div id="object_pullUp">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panel" title="新建客户" data-nav="nav_0" js-scrolling="false" id="page_account_add"
+     data-appbuilder-object="page" data-header="header_account_add" style="overflow: hidden; display: none;" data-footer="none">
+    <header id="header_account_add" data-appbuilder-object="header">
+        <a class="icon icon-reply header-icon left-icon" actionname="goBack"></a>
+        <h1>新建客户</h1>
+        <a class="icon icon-checkmark header-icon right-icon" actionname="saveAdd"></a>
+    </header>
+    <div id="wrapperAA" class="wrapper">
+        <div id="scrollerAA" class="scroller">
+            <div id="theadd">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panel" title="选择页面" data-nav="nav_0" js-scrolling="false" id="page_account_select"
+     data-appbuilder-object="page" data-header="header_account_select" style="overflow: hidden; display: none;" data-footer="none">
+    <header id="header_account_select" data-appbuilder-object="header">
+        <a class="icon icon-reply header-icon left-icon" actionname="goBack"></a>
+        <h1>选择行业</h1>
+    </header>
+    <div class="searchDiv" style="display: block;">
+        <input type="search" class="searchInput" style="" placeholder="请输入行业名称">
+        <a class="searchButton" actionname="searchButton" objectname="select_trade">搜索</a>
+    </div>
+    <div id="wrapperSS" class="wrapper">
+        <div id="scrollerSS" class="scroller">
+            <div id="select_pullDown">
+                <span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新</span>
+            </div>
+            <ul id="theselect">
+            </ul>
+            <div id="select_pullUp">
+                <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多</span>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

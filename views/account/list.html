@@ -1,0 +1,36 @@
+<link type="text/css" rel="stylesheet" href="css/account_replenish.css">
+
+<div class="panel" title="客户列表" data-nav="nav_0" js-scrolling="false" id="page_account_list" selected="selected"
+     data-appbuilder-object="page" data-header="header_account_list" style="overflow: hidden; display: block;" data-footer="none" ng-controller="listController">
+    <header id="header_account_list" data-appbuilder-object="header">
+        <a class="icon icon-reply-all header-icon left-icon" onclick="goHome()"></a>
+        <h1>客户列表</h1>
+        <a class="icon icon-plus header-icon right-icon" actionname="toAdd"></a>
+    </header>
+    <div id="seadiv" class="searchDiv" >
+        <input id="searchDiv"  type="search" class="searchInput" style="" placeholder="请输入客户">
+        <a id='search_button' class="searchButton" actionname="voiceDiscern" objectname="account">搜索</a><!-- searchButton -->
+    </div>
+    <div id="wrapper"  class="wrapper" ng-iscroll='wrapper' pull-down-action="pullDown" pull-up-action="pullUp" ng-iscroll-delay='50' pull-down-id="pullDown" pull-up-id="pullUp">
+        <div id="scroller" class="scroller">
+            <div id="pullDown">
+                <span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新</span>
+            </div>
+            <ul id="thelist">
+                <li class="kh_listli" ng-repeat="item in lists" ROW_ID="{{item.ROW_ID}}">
+                    <a data-transition="up" PARTY_ID="{{item.PARTY_ID}}"
+                       LOCATION_ID="{{item.LOCATION_ID}}" PARTY_NAME="{{item.PARTY_NAME}}"
+                       ADDRESS="{{item.ADDRESS}}" addressid="{{item.ADDRESS_ID}}">
+                        <img src="../public/img/defaultaccount.png" onerror="this.src='../public/img/defaultaccount.png'" />
+                        <p class="pfirst">{{item.PARTY_NAME}}</p>
+                        <p><span class="listicon_phone"></span><span>{{item.PHONE_NUMBER}}</span></p>
+                        <p><span class="listicon_address"></span><span>{{item.ADDRESS}}</span></p>
+                    </a>
+                </li>
+            </ul>
+            <div id="pullUp">
+                <span class="pullUpIcon"></span><span class="pullUpLabel">上拉刷新</span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--HTML5 doctype-->
+<html ng-app="accountController">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta content="black" name=”apple-mobile-web-app-status-bar-style” />
+    <meta name="format-detection" content="telephone=no">
+    <link href="lib/appframework/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="lib/appframework/css/af.ui.css" rel="stylesheet" type="text/css">
+    <link href="css/common.css" rel="stylesheet" type="text/css">
+    <!--<script type="text/javascript" src="lib/angular/angular-1.0.1.min.js"></script>-->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.5/angular.min.js"></script>
+    <script type="text/javascript" src="lib/appframework/appframework.ui.min.js"></script>
+
+    <script type="text/javascript">
+        $.ui.blockPageScroll();
+        $.ui.isAjaxApp = false;
+        $.os.supportsTouch = true;
+        $.ui.useOSThemes = false;
+        $.feat.nativeTouchScroll = false;
+        $.ui.autoLaunch = false;
+    </script>
+    <style>
+        @font-face {
+            font-family: 'lt';
+            src: url('lib/lt.ttf') format('truetype');
+            }
+
+            body {
+                font-family: 'lt', serif;
+                font-size: 14px;
+                font-weight: normal !important;
+            }
+    </style>
+</head>
+<body>
+<div id="afui" class='af'>
+    <!--<div id="splashscreen" class='ui-loader'>
+        <div class="spinnerInit">
+            <p id="spinnerInit"></p>
+        </div>
+    </div>-->
+    <div id="header"></div>
+    <div id="content" style="">
+        <div ng-include src="'views/account/list.html'"></div>
+        <div ng-include src="'views/account/info.html'"></div>
+    </div>
+
+    <div id="navbar" style="margin: 0;float:left;" class="hasMenu">
+        <a id="account" actionname="accountDetail" class="icon icon-file">详情信息</a>
+        <a id="remark" actionname="relevanceObject" class="icon icon-pop-in">备注</a>
+        <a id="contact" actionname="relevanceObject" class="icon icon-user">联系人</a>
+        <a id="chance" actionname="relevanceObject" class="icon icon-coin">销售机会</a>
+        <a id="team" actionname="relevanceObject" class="icon icon-users">销售团队</a>
+        <a id="task" actionname="relevanceObject" class="icon icon-signup">销售任务</a>
+    </div>
+
+</div>
+</body>
+</html>
+<!--<script type="text/javascript" src="../public/js/sea.js"></script>-->
+<script type="text/javascript" src="lib/iscroll.js"></script>
+<script type="text/javascript" src="js/common/ng-iscroll.js"></script>
+<script type="text/javascript" src="js/common/commonService.js"></script>
+<script type="text/javascript" src="js/account/main.js"></script>
+<script type="text/javascript" src="account.js"></script>
+
+
+<!--
+<script type="text/javascript">
+    window.constructor.prototype.setLoginInfos = function(object) {
+        var json=JSON.parse(object);
+        window.username = json["loginName"];
+        seajs.config({
+            charset: 'utf-8',
+            timeout: 20000,
+            debug: false
+        });
+        seajs.use('../apps/account');
+    };
+
+    if($.os.ios===false&&$.os.android===false){
+        var json={loginName: "kingnod92"};
+        var jsonStr=JSON.stringify(json);
+        window.constructor.prototype.setLoginInfos(jsonStr);
+    }
+
+</script>
+-->
+
